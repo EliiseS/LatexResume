@@ -1,0 +1,215 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Resume
+% Version 1.1 (26/09/17)
+%
+% Important note:
+% This template requires the res.cls file to be in the same directory as the
+% .tex file. The res.cls file provides the resume style used for structuring the
+% document.
+%
+% Sources:
+%
+% This template has been downloaded originally from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[margin, 10pt, hidelinks]{res} % Use the res.cls style, the font size can be changed to 11pt or 12pt here
+\usepackage[utf8]{inputenc} \usepackage[T1]{fontenc} \usepackage{lmodern} \usepackage{ebgaramond} \usepackage{hyperref}
+\usepackage{helvet} % Default font is the helvetica postscript font
+%\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
+
+\setlength{\textwidth}{5.1in} % Text width of the document
+
+
+
+\newcommand{\tab}{\hspace*{1em}} % Creates a new command called /tab
+\newcommand{\dhref}{\href{}{\color{blue!80!black}{}}} % Creates a new command called /dhref
+\newcommand{\emphasize}{\large\bfseries} % Creates a new command called /emphasize
+\usepackage{xcolor}
+
+\begin{document}
+\fontsize{10.5}{11}\selectfont
+
+%----------------------------------------------------------------------------------------
+%	NAME AND INFO SECTION
+%----------------------------------------------------------------------------------------
+
+\moveleft\hoffset\leftline{\Huge\bf Eliise Seling} % Your name at the top
+
+\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip % Horizontal line after name; adjust line thickness by changing the '1pt'
+
+\moveright.00\hoffset\rightline{Hellerup, Denmark | SelingEliise@gmail.com | +45 93 98 99 39 | \href{https://www.linkedin.com/in/selingeliise/}{\underline{LinkedIn}} | \href{https://github.com/EliiseS}{\underline{GitHub}}}  % Your address
+%\moveleft.5\hoffset\centerline{City, State 12345}
+%\moveleft.5\hoffset\centerline{(000) 111-1111 or (111) 111-1112}
+
+%-------------------------------------------------------S---------------------------------
+
+\begin{resume}
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE SECTION
+%----------------------------------------------------------------------------------------
+
+ \section{OBJECTIVE}
+
+Undergraduate student in Computer Science with industry experience as Software Developer with an affinity for coding standards, 
+architecture and best practices. Skilled in C\#, .NET, Visual Studio, Node.js, agile and object-oriented development.
+
+%NodeJS, RESTful APIs, MongoDB, user and software testing.
+%C\#, ASP.NET, Visual Studio, agile and object-oriented development.
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\section{EDUCATION}
+
+{\emphasize Software Development}  Professional Bachelor   \hfill  January 2017 - June 2018\\
+{\emphasize Computer Science}  Academy Profession  \hfill  August 2014 - January 2017 \\
+KEA - Københavns Erhvervsakademi 	
+%\\\\
+%{\sl Vocational secondary education,} Computers and Networks \hfill  September 2010 - February 2014
+%\\Vocational Center of Pärnu County, Estonia  				
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{EXPERIENCE}
+
+{\emphasize Software Developer}, MakeItWork ApS  \hfill May 2017 - Present  \\
+{\it C\#, Visual Studio, .NET Core, Azure, SOLID principles. } %\vspace{3pt} %Custom line space
+\begin{itemize} \setlength{\itemindent}{-0.1in}\itemsep 0pt % Reduce space between items 
+\item Developed generics views, controllers, repositories, managers and API search queries,
+\item Developed object based search queries for API's,
+\item Implemented system wide extensive logging with NLog and MediatR,
+\item Deployed systems with Azure and AWS. 
+\end{itemize}
+
+{\emphasize Software Developer}, Hugo Games A/S  \hfill May 2016 - May 2017  \\
+{\it C\#, Visual Studio, JavaScript, ASP.NET, MSSQL, HTML/CSS, Scrum, Unity3D, MSSQL, SSMS, SmartSVN.} %\vspace{3pt} %Custom line space
+\begin{itemize} \setlength{\itemindent}{-0.1in}\itemsep 0pt % Reduce space between items 
+\item Automated conversion of analytics to statistics,
+\item Developed over 100 unit tests using C\#,
+\item Created databases and queries using Microsoft SQL Server and MSSQL,
+\item Developed a statistics component for tracking player progress with CSV export,
+\item Developed an entity reference tracking component. For tracking how entities are interconnected,
+\item Developed mass score update component with JSON text constructed using excel formulas.
+\end{itemize}
+
+
+%{\emphasize Quality Assurance Lead } Hugo Games A/S   \hfill January 2016 - Present \vspace{3pt} %Custom line space
+%\begin{itemize}  \setlength{\itemindent}{-0.1in} \itemsep 0pt % Reduce space between items
+%\item Managerial responsibilities over a software tester,
+%\item Defined, managed and ran 1000's of user and software tests.
+%\item Responsible for the quality of over 50 releases.
+%\end{itemize}
+
+% {\sl Computer Repair Technician Intern } \hfill Springs 2011-13 \\
+% Arvutiparandus Ltd., Arvutiproff Ltd., IThaldus Ltd. \hfill Pärnu, Estonia. \\
+% Worked as hardware technician and customer service agent at a local computer center \\
+% Achievements:
+% \begin{itemize}  \itemsep -1pt % Reduce space between items
+% \item Troubleshooting and corresponding repair of more than 500 computers in less than 4 months,
+% \item Thorough documentation of the repair process,
+% \item Experience and understanding of managing small to medium businesses.
+% \end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	PROFFESIONAL SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{SKILLS}
+
+{\sl\large Languages \& Frameworks:} 
+C\#, .NET Core, Entity Framework, ASP.NET, MSSQL, Razor, Java, JavaScript, LINQ, LaTeX,
+{\color{black!70}PHP, Node.js, AngularJS 1, CSS/HTML, MySQL.} \\ 
+{\sl\large  Software:} Visual Studio, Azure, AWS, Microsoft SQL Server, Postman, MS Office. 
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+\section{PROJECTS}
+
+Billing System\hfill May 2017  - Present\\
+\href{http://www.makeitwork.dk}{\underline{MakeItWork ApS}} \hfill Copenhagen, Denmark. \\
+{\it C\#, .NET Core 2.0, Visual Studio, Razor, Entity Framework Core, Azure, IoC, Moq.}
+\begin{description}
+\item Established the foundations of a microservice orientated ISP billing system, built from ground up utilizing layer based architecture and modern technologies such as MVC, REST API with Azure MSSQL database. The system delivers business features covering billing automation to logging and search queries.
+\end{description}
+
+Analytics to Statistics conversion module \hfill December 2016  \\
+\href{https://hugogames.com/}{\underline{Hugo Games A/S}} \hfill Copenhagen, Denmark. \\
+{\it C\#, Visual Studio, JavaScript, ASP.NET, MSSQL, HTML/CSS, SOLID principles.}
+\begin{description}
+\item Developed and designed the solution for converting statistics to analytics.
+\end{description}
+
+Created the API for a \href{https://Eliise_S@bitbucket.org/Eliise_S/mongodbhosting.git}{\underline{MongoDB hosting website}}\hfill June 2016  \\
+{\it Node.js, MongoDB, JavaScript, AngluarJS 1, Postman, RESTful API, MVC.}
+\begin{description}
+\item Developed and designed the RESTful API to be used by the users to be able perform CRUD operations on their hosted MongoDB.
+\end{description}
+%----------------------------------------------------------------------------------------
+
+%Constructed \href{https://github.com/EliiseS/V.I.S.}{\underline{V.I.S}}, an inventory management system with an online database\hfill June 2015  \\
+%\href{http://villawatt.dk/}{\underline{Villa Watt}} \hfill Copenhagen, Denmark. \\
+%{\it Java, Swing, Netbeans, BitBucket, MySQL,}
+%\begin{description}
+%\item As a team, we designed, documented and created an agile system following the principles of the Unified Process, this incorporates a vision document, use cases and diagrams.
+%\end{description}
+%----------------------------------------------------------------------------------------
+
+%Configuring multiple virtual networks with VirtualBox \hfill January 2014  \\
+%{\it CentOS 6, Windows Server 2008 R2}
+%\begin{description}
+%\item Configurations included primary/backup domain controller, active directory, DHCP, DNS, file service role/samba, FTP, phpmyadmin, apache.
+%\end{description}
+
+%----------------------------------------------------------------------------------------
+%	SERVICE EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+%\section{SERVICE EXPERIENCE}
+
+%{\sl Catering Waitress}   \hfill  August 2015 - Present \\
+%\href{http://bojesen.dk/axelborg/}{Bojesen Axelborg},  \hfill Copenhagen, Denmark. 
+%\tab Part of an international team providing professional clientele service including bartending.
+% The work could occasionally be demanding and has taught me to work well under high-pressure while maintaining the integrity of our establishment and attentive service.
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATES SECTION
+%----------------------------------------------------------------------------------------
+%\section{CERTIFICATES}
+
+%{\sl Junior IT Specialist,} EUCIP Core Certificate \hfill February 2014
+
+%----------------------------------------------------------------------------------------
+%	EXTRACURRICULAR COURSES SECTION
+%----------------------------------------------------------------------------------------
+% \section{EXTRA- \\ CURRICULAR \\ COURSES}
+
+% {\sl Marketing of Organic Products,} Reiting Ldt. \hfill October 2012 \\
+% {\sl Website Development,} German Technological School of Pärnu, \hfill November 2010 \\
+% {\sl Project Management,} DesignLAB Orissa \hfill March 2009
+
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+%\section{LANGUAGES}
+
+%Danish,		{\sl Elementary} 	\hfill English, 	{\sl Native}   		\hfill  Estonian,	{\sl Native} 		\hfill 	
+
+
+%----------------------------------------------------------------------------------------
+%	EXTRA-CURRICULAR ACTIVITIES SECTION
+%----------------------------------------------------------------------------------------
+
+\end{resume}
+\end{document} 
