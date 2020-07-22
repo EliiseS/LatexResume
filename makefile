@@ -1,0 +1,2 @@
+build:
+	latex EliiseSeling.pdf
