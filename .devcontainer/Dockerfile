@@ -3,31 +3,27 @@
 # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
 #-------------------------------------------------------------------------------------------------------------
 
-FROM alpine:3.10
+FROM debian:10-slim
 
-# This Dockerfile adds a non-root user with sudo access. Use the "remoteUser"
-# property in devcontainer.json to use it. On Linux, the container user's GID/UIDs
-# will be updated to match your local UID/GID (when using the dockerFile property).
-# See https://aka.ms/vscode-remote/containers/non-root-user for details.
-ARG USERNAME=vscode
-ARG USER_UID=1000
-ARG USER_GID=$USER_UID
+# Avoid warnings by switching to noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
-# Set to false to skip installing zsh and Oh My ZSH!
-ARG INSTALL_ZSH="true"
-
-# Location and expected SHA for common setup script - SHA generated on release
-ARG COMMON_SCRIPT_SOURCE="https://raw.githubusercontent.com/microsoft/vscode-dev-containers/master/script-library/common-alpine.sh"
-ARG COMMON_SCRIPT_SHA="dev-mode"
-
-# Install git, bash, dependencies, and add a non-root user
-RUN apk update \
-    && apk add --no-cache wget coreutils ca-certificates \
+# Configure apt and install packages
+RUN apt update \
+    && apt -y install --no-install-recommends apt-utils dialog wget ca-certificates 2>&1 \
+    # Verify git, process tools, lsb-release (common in install instructions for CLIs) installed
+    && apt -y install git procps lsb-release unzip build-essential \
+    # Install missing icu-devtools to be able to use liveshare. More info: https://stackoverflow.com/questions/58736399/how-to-get-vscode-liveshare-extension-working-when-running-inside-vscode-remote
+    && apt install icu-devtools -y \
     #
-    # Verify git, common tools / libs installed, add/modify non-root user, optionally install zsh
-    && wget -q -O /tmp/common-setup.sh $COMMON_SCRIPT_SOURCE \
-    && if [ "$COMMON_SCRIPT_SHA" != "dev-mode" ]; then echo "$COMMON_SCRIPT_SHA /tmp/common-setup.sh" | sha256sum -c - ; fi \
-    && /bin/ash /tmp/common-setup.sh "$INSTALL_ZSH" "$USERNAME" "$USER_UID" "$USER_GID" \
-    && rm /tmp/common-setup.sh \
-    # Install TexLive
-    && apk add texmf-dist texlive-full
+    # Clean up
+    && apt autoremove -y \
+    && apt clean -y \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install TexLive
+RUN apt update \
+    && apt -y install texlive-full
+
+# Switch back to dialog for any ad-hoc use of apt-get
+ENV DEBIAN_FRONTEND=dialog
